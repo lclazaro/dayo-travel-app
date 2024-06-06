@@ -5,8 +5,8 @@
         <h2>User List</h2>
     </div>
     <div class="card-body">
-        <a href="{{ url('/users/create') }}" class="btn btn-success btn-sm" title="Add New User">
-            <i class="fa fa-plus" aria-hidden="true"></i> Add New
+        <a href="{{ url('/users/create') }}" class="btn btn-link btn-sm" title="Add New User" style="padding: 0;">
+            <img src="{{ asset('assets/img/add.png') }}" alt="Add New" style="height: 20px; width: 20px;"> <!-- Adjust the size as needed -->
         </a>
         <br/>
         <br/>
@@ -35,13 +35,19 @@
                         <td>{{ $item->email }}</td>
 
                         <td>
-                            <a href="{{ url('/users/' . $item->id) }}" title="View User"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                            <a href="{{ url('/users/' . $item->id . '/edit') }}" title="Edit User"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                            <a href="{{ url('/users/' . $item->id) }}" title="View User" class="btn btn-link btn-sm" style="padding: 0;">
+                                <img src="{{ asset('assets/img/view.png') }}" alt="View" style="height: 20px; width: 20px;"> <!-- Adjust the size as needed -->
+                            </a>
+                            <a href="{{ url('/users/' . $item->id . '/edit') }}" title="Edit User" class="btn btn-link btn-sm" style="padding: 0;">
+                                <img src="{{ asset('assets/img/edit.png') }}" alt="Edit" style="height: 20px; width: 20px;"> <!-- Adjust the size as needed -->
+                            </a>
 
                             <form method="POST" action="{{ url('/users' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                 {{ method_field('DELETE') }}
                                 {{ csrf_field() }}
-                                <button type="submit" class="btn btn-danger btn-sm" title="Delete User" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                <button type="submit" class="btn btn-link btn-sm" title="Delete User" style="padding: 0; border: none; background: none;" onclick="return confirm(&quot;Confirm delete?&quot;)">
+                                    <img src="{{ asset('assets/img/delete.png') }}" alt="Delete" style="height: 20px; width: 20px;">
+                                </button>
                             </form>
                         </td>
                     </tr>

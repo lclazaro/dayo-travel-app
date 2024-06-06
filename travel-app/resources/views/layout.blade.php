@@ -36,7 +36,7 @@
 
         .content-wrapper {
             display: flex;
-            height: 100%;
+            height: calc(100% - 56px); /* Subtract navbar height */
             width: 100%;
             flex: 1;
         }
@@ -73,13 +73,14 @@
 
         .content {
             flex: 1;
-            padding: 0; /* Remove padding */
+            padding: 16px; /* Add padding as needed */
             margin: 0; /* Remove margin */
             background-color: white;
             display: flex;
             flex-direction: column;
             overflow: auto;
         }
+
 
         .user-list {
             font-family: 'Heartbreak', sans-serif;
