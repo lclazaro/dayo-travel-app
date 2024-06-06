@@ -5,20 +5,22 @@
   <div class="card-header">User Page</div>
   <div class="card-body">
       
-      <form action="{{ url('users') }}" method="post">
+      <form action="{{ url('listings') }}" method="post">
         {!! csrf_field() !!}
-        <label>First Name</label></br>
-        <input type="text" name="fname" id="fname" class="form-control"></br>
-        <label>Last Name</label></br>
-        <input type="text" name="lname" id="lname" class="form-control"></br>
-        <label>Age</label></br>
-        <input type="text" name="age" id="age" class="form-control"></br>
-        <label>Sex</label></br>
-        <input type="text" name="sex" id="sex" class="form-control"></br>
-        <label>Contact No.</label></br>
-        <input type="text" name="contactnum" id="contactnum" class="form-control"></br>
-        <label>Email</label></br>
-        <input type="text" name="email" id="email" class="form-control"></br>
+        <label>Name</label></br>
+        <input type="text" name="name" id="name" class="form-control"></br>
+        <label>Unit Type</label></br>
+        <input type="text" name="unit_type" id="unit_type" class="form-control"></br>
+        <label>Barangay</label></br>
+        <input type="text" name="barangay" id="barangay" class="form-control"></br>
+        <label>City</label></br>
+        <input type="text" name="city" id="city" class="form-control"></br>
+        <label>Province</label></br>
+        <input type="text" name="province" id="province" class="form-control"></br>
+        <label>Region</label></br>
+        <input type="text" name="region" id="region" class="form-control"></br>
+        <label>Country Code</label></br>
+        <input type="text" name="country_code" id="country_code" class="form-control"></br>
         <input type="submit" value="Save" class="btn btn-success"></br>
     </form>
    

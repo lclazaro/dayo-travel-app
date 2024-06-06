@@ -14,34 +14,38 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID No. </th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Age</th>
-                        <th>Sex</th>
-                        <th>Contact no.</th>
-                        <th>Email</th>
+                        <th>UID No. </th>
+                        <th>List ID</th>
+                        <th>Name</th>
+                        <th>Unit Type</th>
+                        <th>Barangay</th>
+                        <th>City</th>
+                        <th>Province</th>
+                        <th>Region</th>
+                        <th>Country Code</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($users as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $item->fname }}</td>
-                        <td>{{ $item->lname }}</td>
-                        <td>{{ $item->age }}</td>
-                        <td>{{ $item->sex }}</td>
-                        <td>{{ $item->contactnum }}</td>
-                        <td>{{ $item->email }}</td>
+                        <td>{{ $item->list_id }}</td>
+                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->unit_type }}</td>
+                        <td>{{ $item->barangay }}</td>
+                        <td>{{ $item->city }}</td>
+                        <td>{{ $item->province }}</td>
+                        <td>{{ $item->region }}</td>
+                        <td>{{ $item->country_code }}</td>
 
                         <td>
-                            <a href="{{ url('/users/' . $item->id) }}" title="View User"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                            <a href="{{ url('/users/' . $item->id . '/edit') }}" title="Edit User"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                            <a href="{{ url('/listings/' . $item->list_id) }}" title="View Lisitng"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                            <a href="{{ url('/listings/' . $item->list_id . '/edit') }}" title="Edit Listing"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
-                            <form method="POST" action="{{ url('/users' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                            <form method="POST" action="{{ url('/listings' . '/' . $item->list_id) }}" accept-charset="UTF-8" style="display:inline">
                                 {{ method_field('DELETE') }}
                                 {{ csrf_field() }}
-                                <button type="submit" class="btn btn-danger btn-sm" title="Delete User" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Lisitng" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                             </form>
                         </td>
                     </tr>

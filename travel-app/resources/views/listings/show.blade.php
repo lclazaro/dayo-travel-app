@@ -3,16 +3,18 @@
  
  
 <div class="card">
-  <div class="card-header">User Page</div>
+  <div class="card-header">Listing Page</div>
   <div class="card-body">
         <div class="card-body">
-        <h5 class="card-title">First Name : {{ $users->fname }}</h5>
-        <p class="card-text">Last Name : {{ $users->lname }}</p>
-        <p class="card-text">Age : {{ $users->age }}</p>
-        <p class="card-text">Sex : {{ $users->sex }}</p>
-        <p class="card-text">Contact no. : {{ $users->contactnum }}</p>
-        <p class="card-text">Email : {{ $users->email }}</p>
-  </div>
+        <h5 class="card-title">UID : {{ $listings->fname }}</h5>
+        <p class="card-text">List ID : {{ $listings->lname }}</p>
+        <p class="card-text">Name : {{ $listings->name }}</p>
+        <p class="card-text">Unit Type : {{ $listings->unit_type }}</p>
+        <p class="card-text">Barangay : {{ $listings->barangay }}</p>
+        <p class="card-text">City : {{ $listings->city }}</p>
+        <p class="card-text">Province : {{ $listings->province }}</p>
+        <p class="card-text">Region : {{ $listings->region }}</p>
+        <p class="card-text">Country Code : {{ $listings->country_code }}</p>      </div>
        
     </hr>
   
