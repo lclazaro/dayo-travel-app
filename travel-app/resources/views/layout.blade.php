@@ -11,7 +11,7 @@
         
     <title>DAYO: Travel Manager</title>
     <style>
-
+    
         html, body {
             height: 100%;
             width: 100%;
@@ -19,7 +19,8 @@
             padding: 0;
             overflow: hidden;
             font-family: 'Roboto', sans-serif;
-            
+            background: url('{{ asset('assets/img/background.png') }}') no-repeat center center fixed;
+            background-size: cover;
         }
 
         .container {
@@ -62,19 +63,35 @@
         }
 
         .sidebar a:hover:not(.active) {
-            background-color: #555;
+            background-color: #555
             color: white;
         }
 
+        
+
         .content {
-            flex: 1;
-            padding: 16px; /* Add padding as needed */
-            margin: 0; /* Remove margin */
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            overflow: auto;
-        }
+    position: relative;
+    flex: 1;
+    padding: 16px; /* Add padding as needed */
+    margin: 0; /* Remove margin */
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: transparent; /* Ensure the original background is transparent */
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #BB7520; /* Original background color */
+    opacity: 0.5; /* Adjust opacity as needed */
+    z-index: -1.5; /* Ensure it is behind the content */
+}
+
 
 
         .user-list {
