@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
-use App\Models\ListingType;
+use App\Models\Country;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Route;
 
@@ -16,15 +16,15 @@ Route::get('/', function () {
 });
 
 
-class ListingTypeController extends Controller
+class CountryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index(): View
     {
-        $listingtypes=ListingType::all();
-        return view('listingypes.index') ->with('listingtypes',$users);
+        $country=Country::all();
+        return view('country.index') ->with('country',$country);
     }
 
     /**
@@ -35,7 +35,7 @@ class ListingTypeController extends Controller
 
      public function create(): View
     {
-        return view('listingtypes.create');
+        return view('country.create');
     }
 
     /**
@@ -53,8 +53,8 @@ class ListingTypeController extends Controller
      */
     public function show(string $id): View
     {
-        $listingtypes=ListingType::find($id);
-        return view('listingtypes.show') -> with('listingtypes',$listingtypes);
+        $country=ListingType::find($id);
+        return view('country.show') -> with('country',$country);
     }
 
     /**
@@ -62,8 +62,8 @@ class ListingTypeController extends Controller
      */
     public function edit(string $id): View
     {
-        $listingtypes=ListingType::find($id);
-        return view('listingtypes.edit') -> with('listingtypes',$listingtypes);
+        $country=ListingType::find($id);
+        return view('country.edit') -> with('country',$country);
     }
 
     /**
