@@ -35,7 +35,7 @@ class CountryController extends Controller
 
      public function create(): View
     {
-        return view('country.create');
+        return view('countries.create');
     }
 
     /**
@@ -44,8 +44,8 @@ class CountryController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $input = $request->all();
-        ListingType::create($input);
-        return redirect('listings')->with('flash_message', 'Listing Type Added!'); 
+        Country::create($input);
+        return redirect('countries')->with('flash_message', 'Country Added!'); 
     }
 
     /**
@@ -53,8 +53,8 @@ class CountryController extends Controller
      */
     public function show(string $id): View
     {
-        $country=ListingType::find($id);
-        return view('country.show') -> with('country',$country);
+        $country=Country::find($id);
+        return view('countries.show') -> with('countrys',$country);
     }
 
     /**
@@ -62,8 +62,8 @@ class CountryController extends Controller
      */
     public function edit(string $id): View
     {
-        $country=ListingType::find($id);
-        return view('country.edit') -> with('country',$country);
+        $country=Country::find($id);
+        return view('countries.edit') -> with('countrys',$country);
     }
 
     /**
@@ -71,10 +71,10 @@ class CountryController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
     {
-        $student = User::find($id);
+        $country = Country::find($id);
         $input = $request->all();
-        $student->update($input);
-        return redirect('users')->with('flash_message', 'Student Updated!');
+        $country->update($input);
+        return redirect('countries')->with('flash_message', 'Country Updated!');
     }
 
     /**
@@ -82,7 +82,7 @@ class CountryController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
-        User::destroy($id);
-        return redirect('users')->with('flash_message', 'Student Deleted!');
+        Country::destroy($id);
+        return redirect('countries')->with('flash_message', 'Country Deleted!');
     }
 }

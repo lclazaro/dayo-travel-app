@@ -45,7 +45,7 @@ class ListingTypeController extends Controller
     {
         $input = $request->all();
         Listing_type::create($input);
-        return redirect('listings')->with('flash_message', 'Listing Type Added!'); 
+        return redirect('listingtypes')->with('flash_message', 'Listing Type Added!'); 
     }
 
     /**
@@ -71,10 +71,10 @@ class ListingTypeController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
     {
-        $student = User::find($id);
+        $listingtypes = Listing_type::find($id);
         $input = $request->all();
-        $student->update($input);
-        return redirect('users')->with('flash_message', 'Student Updated!');
+        $listingtypes->update($input);
+        return redirect('listingtypes')->with('flash_message', 'Listing Type Updated!');
     }
 
     /**
@@ -82,7 +82,7 @@ class ListingTypeController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
-        User::destroy($id);
-        return redirect('users')->with('flash_message', 'Student Deleted!');
+        Listing_type::destroy($id);
+        return redirect('listing_types')->with('flash_message', 'Student Deleted!');
     }
 }

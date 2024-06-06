@@ -21,7 +21,7 @@
                 <tbody>
                 @foreach($listingtypes as $item)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        <!-- <td>{{ $loop->iteration }}</td> -->
                         <td>{{ $item->unit_type }}</td>
                         <td>{{ $item->unit_term }}</td>
 
@@ -29,7 +29,7 @@
                             <a href="{{ url('/listingtypes/' . $item->unit_type) }}" title="View Listing Type"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                             <a href="{{ url('/listingtypes/' . $item->unit_type . '/edit') }}" title="Edit Listing Type"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
-                            <form method="POST" action="{{ url('/listngtypes' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                            <form method="POST" action="{{ url('/listngtypes' . '/' . $item->unit_type) }}" accept-charset="UTF-8" style="display:inline">
                                 {{ method_field('DELETE') }}
                                 {{ csrf_field() }}
                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Listing Type" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
