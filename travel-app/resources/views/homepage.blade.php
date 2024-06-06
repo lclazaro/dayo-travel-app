@@ -20,7 +20,7 @@
             font-family: 'Roboto', sans-serif;
         }
         .navbar {
-            background-color: #fff;
+            background-color: #64816B;
             border-bottom: 1px solid #ddd;
         }
         .navbar-brand img {

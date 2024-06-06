@@ -11,6 +11,11 @@
         
     <title>DAYO: Travel Manager</title>
     <style>
+        @font-face {
+            font-family: 'Heartbreak';
+            src: url('{{ asset('assets/Heartbreak.ttf') }}') format('truetype');
+        }
+
         html, body {
             height: 100%;
             width: 100%;
@@ -18,6 +23,8 @@
             padding: 0;
             overflow: hidden;
             font-family: 'Roboto', sans-serif;
+            background: url('{{ asset('assets/img/background.png') }}') no-repeat center center fixed;
+            background-size: cover;
         }
 
         .container {
@@ -31,7 +38,7 @@
             display: flex;
             height: 100%;
             width: 100%;
-            flex: -1;
+            flex: 1;
         }
 
         .sidebar {
@@ -49,8 +56,8 @@
         }
 
         .sidebar a img {
-            height: 1em;
-            width: auto;
+            height: 32px;
+            width: 32px;
             margin-right: 8px;
         }
 
@@ -66,12 +73,12 @@
 
         .content {
             flex: 1;
-            padding: 1px 16px;
-        }
-
-        @font-face {
-            font-family: 'Heartbreak';
-            src: url('{{ asset('assets/Heartbreak.ttf') }}') format('truetype');
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
         }
 
         .user-list {
@@ -79,7 +86,7 @@
         }
 
         .navbar-brand img {
-            height: 50px;
+            height: 80px;
             width: auto;
         }
 
@@ -112,7 +119,7 @@
 
         <div class="content-wrapper">
             <div class="sidebar">
-                  <a class="active" href="{{ url('/') }}"><img src="{{ asset('assets/img/home.png') }}" alt="Home"></a>
+                <a class="active" href="{{ url('/') }}"><img src="{{ asset('assets/img/home.png') }}" alt="Home"></a>
                 <a href="{{ url('users') }}" class="user-list"><img src="{{ asset('assets/img/user.png') }}" alt="User"></a>
                 <a href="{{ url('listings') }}"><img src="{{ asset('assets/img/list.png') }}" alt="List"></a>
                 <a href="{{ url('listing_types') }}"><img src="{{ asset('assets/img/building.png') }}" alt="Building"></a>
