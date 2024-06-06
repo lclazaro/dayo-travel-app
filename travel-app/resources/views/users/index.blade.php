@@ -41,15 +41,14 @@
                             <a href="{{ url('/users/' . $item->id . '/edit') }}" title="Edit User" class="btn btn-link btn-sm" style="padding: 0;">
                                 <img src="{{ asset('assets/img/edit.png') }}" alt="Edit" style="height: 20px; width: 20px;"> <!-- Adjust the size as needed -->
                             </a>
+                                            <form method="POST" action="{{ url('/users/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                    {{ method_field('DELETE') }}
+                    {{ csrf_field() }}
+                    <button type="submit" class="btn btn-link btn-sm" title="Delete User" style="padding: 0; border: none; background: none;" onclick="return confirm('Confirm delete?')">
+                        <img src="{{ asset('assets/img/delete.png') }}" alt="Delete" style="height: 20px; width: 20px;">
+                    </button>
+                </form>
 
-                            <form method="POST" action="{{ url('/users' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
-                                {{ method_field('DELETE') }}
-                                {{ csrf_field() }}
-                                <button type="submit" class="btn btn-link btn-sm" title="Delete User" style="padding: 0; border: none; background: none;" onclick="return confirm(&quot;Confirm delete?&quot;)">
-                                    <img src="{{ asset('assets/img/delete.png') }}" alt="Delete" style="height: 20px; width: 20px;">
-                                </button>
-                            </form>
-                        </td>
                     </tr>
                 @endforeach
                 </tbody>
