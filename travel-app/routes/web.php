@@ -8,3 +8,6 @@ Route::get('/', function () {
 });
 
 Route::resource('/users',UserController::class);
+Route::resource('/listings',UserController::class);
+Route::resource('/listingtypes',UserController::class);
+Route::resource('/countries',UserController::class);
