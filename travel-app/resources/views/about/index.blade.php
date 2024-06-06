@@ -1,3 +1,5 @@
+@extends('layout')
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-    <h1>About Page Content</h1>
+    <h3>About content</h3>
 </body>
 </html>
+@endsection
