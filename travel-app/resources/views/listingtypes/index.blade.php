@@ -19,7 +19,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($users as $item)
+                @foreach($listingtypes as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->unit_type }}</td>

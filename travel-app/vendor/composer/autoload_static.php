@@ -513,6 +513,7 @@ class ComposerStaticInit7e8c3c14ff33b199b4a0838993eb8423
         'App\\Http\\Controllers\\ListingController' => __DIR__ . '/../..' . '/app/Http/Controllers/ListingController.php',
         'App\\Http\\Controllers\\ListingTypeController' => __DIR__ . '/../..' . '/app/Http/Controllers/ListingTypeController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
+        'App\\Models\\Listing' => __DIR__ . '/../..' . '/app/Models/Listing.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

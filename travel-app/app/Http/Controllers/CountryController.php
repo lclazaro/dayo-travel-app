@@ -23,8 +23,8 @@ class CountryController extends Controller
      */
     public function index(): View
     {
-        $country=Country::all();
-        return view('country.index') ->with('country',$country);
+        $countrys=Country::all();
+        return view('countries.index') ->with('countrys',$countrys);
     }
 
     /**

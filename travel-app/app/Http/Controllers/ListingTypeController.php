@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
-use App\Models\ListingType;
+use App\Models\Listing_type;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Route;
 
@@ -23,8 +23,8 @@ class ListingTypeController extends Controller
      */
     public function index(): View
     {
-        $listingtypes=ListingType::all();
-        return view('listingypes.index') ->with('listingtypes',$users);
+        $listingtypes=Listing_type::all();
+        return view('listingtypes.index') ->with('listingtypes',$listingtypes);
     }
 
     /**
@@ -44,7 +44,7 @@ class ListingTypeController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $input = $request->all();
-        ListingType::create($input);
+        Listing_type::create($input);
         return redirect('listings')->with('flash_message', 'Listing Type Added!'); 
     }
 
@@ -53,7 +53,7 @@ class ListingTypeController extends Controller
      */
     public function show(string $id): View
     {
-        $listingtypes=ListingType::find($id);
+        $listingtypes=Listing_type::find($id);
         return view('listingtypes.show') -> with('listingtypes',$listingtypes);
     }
 
@@ -62,7 +62,7 @@ class ListingTypeController extends Controller
      */
     public function edit(string $id): View
     {
-        $listingtypes=ListingType::find($id);
+        $listingtypes=Listing_type::find($id);
         return view('listingtypes.edit') -> with('listingtypes',$listingtypes);
     }
 

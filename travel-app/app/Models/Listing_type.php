@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Listing_type extends Model
 {
-    protected $table='Listing_type';
+    protected $table='listing_types';
     protected $primaryKey='id';
     protected $fillable=['unit_type','unit_term'];
     use HasFactory;

@@ -122,7 +122,7 @@
                 <a class="active" href="{{ url('/') }}"><img src="{{ asset('assets/img/home.png') }}" alt="Home"></a>
                 <a href="{{ url('users') }}" class="user-list"><img src="{{ asset('assets/img/user.png') }}" alt="User"></a>
                 <a href="{{ url('listings') }}" class="listing-list">><img src="{{ asset('assets/img/list.png') }}" alt="List"></a>
-                <a href="{{ url('listing_types') }}" class="listingtype-list">><img src="{{ asset('assets/img/building.png') }}" alt="Building"></a>
+                <a href="{{ url('listingtypes') }}" class="listingtype-list">><img src="{{ asset('assets/img/building.png') }}" alt="Building"></a>
                 <a href="{{ url('countries') }}" class="country-list">><img src="{{ asset('assets/img/countries.png') }}" alt="Countries"></a>
             </div>
 
