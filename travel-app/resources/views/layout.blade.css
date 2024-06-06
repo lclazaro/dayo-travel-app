@@ -1,4 +1,4 @@
-<style>
+/* <style> */
 html, body {
     height: 100%;
     width: 100%;
@@ -50,7 +50,7 @@ html, body {
 
 @font-face {
     font-family: 'Heartbreak';
-    src: url('{{ asset('assets/Heartbreak.ttf') }}') format('truetype'); /* Correct the font path */
+    src: url("{{ asset('assets/Heartbreak.ttf') }}") format('truetype'); /* Correct the font path */
 }
 
 .user-list {
