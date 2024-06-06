@@ -6,9 +6,9 @@
   <div class="card-header">Listing Page</div>
   <div class="card-body">
         <div class="card-body">
-        <h5 class="card-title">UID : {{ $listings->fname }}</h5>
-        <p class="card-text">List ID : {{ $listings->lname }}</p>
-        <p class="card-text">Name : {{ $listings->name }}</p>
+        <h5 class="card-title">UID : {{ $listings->uid }}</h5>
+        <p class="card-text">List ID : {{ $listings->list_id }}</p>
+        <p class="card-text">Name : {{ $listings->list_name }}</p>
         <p class="card-text">Unit Type : {{ $listings->unit_type }}</p>
         <p class="card-text">Barangay : {{ $listings->barangay }}</p>
         <p class="card-text">City : {{ $listings->city }}</p>

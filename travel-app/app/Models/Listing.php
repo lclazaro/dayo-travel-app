@@ -9,6 +9,6 @@ class Listing extends Model
 {
     protected $table='listings';
     protected $primaryKey='list_id';
-    protected $fillable=['fname','lname','age','sex','contactnum','email'];
+    protected $fillable=['uid','list_id','list_name','unit_type','barangay','city', 'province', 'region', 'country_code'];
     use HasFactory;
 }
