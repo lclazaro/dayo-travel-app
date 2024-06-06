@@ -5,10 +5,10 @@
   <div class="card-header">Edit Page</div>
   <div class="card-body">
       
-      <form action="{{ url('users/' .$users->id) }}" method="post">
+      <form action="{{ url('users/' .$users->uid) }}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")
-        <input type="hidden" name="id" id="id" value="{{$users->id}}" id="id" />
+        <input type="hidden" name="uid" id="uid" value="{{$users->uid}}" id="id" />
         <label>First Name</label></br>
         <input type="text" name="fname" id="fname" value="{{$users->fname}}" class="form-control"></br>
         <label>Last Name</label></br>

@@ -74,7 +74,7 @@ class UserController extends Controller
         $student = User::find($id);
         $input = $request->all();
         $student->update($input);
-        return redirect('users')->with('flash_message', 'Student Updated!');
+        return redirect('users')->with('flash_message', 'User Updated!');
     }
 
     /**
@@ -82,8 +82,8 @@ class UserController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
-        $user = User::find($id);
-        $user->delete();
-        return redirect('users')->with('flash_message', 'Student Deleted!');
+        // $user = User::find($id);
+        User::destroy($id);
+        return redirect('users')->with('flash_message', 'User Deleted!');
     }
 }
