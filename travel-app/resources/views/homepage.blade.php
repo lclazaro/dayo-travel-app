@@ -134,8 +134,8 @@
 
     <div class="bg-cover">
         <div class="content-wrapper">
-            <h1>No place to stay?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+            <h1>No place to stay, but here we find our way.</h1>
+            <p>DAYO is an app designed to assist students in finding safe, affordable, and comfortable accommodations. Whether you're looking for a dorm room, a shared apartment, or a condominium, DAYO offers a seamless and efficient way to locate your ideal living space. Our mission is to ensure that every student finds a place they can call home, where they feel secure and supported throughout their academic journey.</p>
             <a href="#" class="btn btn-dark btn-custom">Sign up here</a>
         </div>
     </div>
