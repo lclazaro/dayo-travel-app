@@ -2,10 +2,10 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h2>User List</h2>
+        <h2>Country List</h2>
     </div>
     <div class="card-body">
-        <a href="{{ url('/users/create') }}" class="btn btn-success btn-sm" title="Add New User">
+        <a href="{{ url('/countries/create') }}" class="btn btn-success btn-sm" title="Add New Country Code">
             <i class="fa fa-plus" aria-hidden="true"></i> Add New
         </a>
         <br/>
@@ -14,34 +14,27 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID No. </th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Age</th>
-                        <th>Sex</th>
-                        <th>Contact no.</th>
-                        <th>Email</th>
+                        <th>Country Code</th>
+                        <th>Country Name</th>
+                        <th>Continent</th>
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($users as $item)
+                @foreach($countrys as $item)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $item->fname }}</td>
-                        <td>{{ $item->lname }}</td>
-                        <td>{{ $item->age }}</td>
-                        <td>{{ $item->sex }}</td>
-                        <td>{{ $item->contactnum }}</td>
-                        <td>{{ $item->email }}</td>
+                        <!-- <td>{{ $loop->iteration }}</td> -->
+                        <td>{{ $item->country_code }}</td>
+                        <td>{{ $item->country_name }}</td>
+                        <td>{{ $item->continent }}</td>
 
                         <td>
-                            <a href="{{ url('/users/' . $item->id) }}" title="View User"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                            <a href="{{ url('/users/' . $item->id . '/edit') }}" title="Edit User"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                            <a href="{{ url('/countries/' . $item->country_code) }}" title="View Country"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                            <a href="{{ url('/countries/' . $item->country_code . '/edit') }}" title="Edit Country"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
-                            <form method="POST" action="{{ url('/users' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
+                            <form method="POST" action="{{ url('/countries' . '/' . $item->country_code) }}" accept-charset="UTF-8" style="display:inline">
                                 {{ method_field('DELETE') }}
                                 {{ csrf_field() }}
-                                <button type="submit" class="btn btn-danger btn-sm" title="Delete User" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Country" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                             </form>
                         </td>
                     </tr>

@@ -2,7 +2,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h2>User List</h2>
+        <h2>Listing List</h2>
     </div>
     <div class="card-body">
         <a href="{{ url('/users/create') }}" class="btn btn-success btn-sm" title="Add New User">
@@ -26,9 +26,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($users as $item)
+                @foreach($listings as $item)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        <!-- <td>{{ $loop->iteration }}</td> -->
+                        <td>{{ $item->uid }}</td>
                         <td>{{ $item->list_id }}</td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->unit_type }}</td>
