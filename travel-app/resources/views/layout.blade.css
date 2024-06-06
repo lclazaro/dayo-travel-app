@@ -1,0 +1,80 @@
+<style>
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif; /* Apply the imported font */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%; /* Set to 100% to make it responsive */
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    overflow: auto;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.content {
+    flex: 1;
+    padding: 1px 16px;
+}
+
+@font-face {
+    font-family: 'Heartbreak';
+    src: url('{{ asset('assets/Heartbreak.ttf') }}') format('truetype'); /* Correct the font path */
+}
+
+.user-list {
+    font-family: 'Heartbreak', sans-serif; /* Apply Heartbreak font to User List */
+}
+
+.navbar-brand img {
+    height: 40px; /* Adjust the height for better visibility */
+    width: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    /* .sidebar a {float: left;} */
+    .content {margin-left: 0;}
+}
+
+@media screen and (max-width: 1000px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}

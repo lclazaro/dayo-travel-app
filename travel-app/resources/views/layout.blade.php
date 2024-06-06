@@ -4,99 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMQU98MF5F/8AvfPuhp7cReHDUyec5WglJln76F" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        
     <title>DAYO: Travel Manager</title>
     <style>
-        /* The side navigation menu */
-        .sidebar {
-        margin: 0;
-        padding: 0;
-        width: 200px;
-        background-color: #f1f1f1;
-        position: fixed;
-        height: 100%;
-        overflow: auto;
-        }
-
-        /* Sidebar links */
-        .sidebar a {
-        display: block;
-        color: black;
-        padding: 16px;
-        text-decoration: none;
-        }
-
-        /* Active/current link */
-        .sidebar a.active {
-        background-color: #04AA6D;
-        color: white;
-        }
-
-        /* Links on mouse-over */
-        .sidebar a:hover:not(.active) {
-        background-color: #555;
-        color: white;
-        }
-
-        /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-        div.content {
-        margin-left: 200px;
-        padding: 1px 16px;
-        height: 1000px;
-        }
-
-        /* On screens that are less than 700px wide, make the sidebar into a topbar */
-        @media screen and (max-width: 700px) {
-        .sidebar {
+        html, body {
+            height: 100%;
             width: 100%;
-            height: auto;
-            position: relative;
-        }
-        .sidebar a {float: left;}
-        div.content {margin-left: 0;}
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
         }
 
-        /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-        @media screen and (max-width: 400px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            flex: -1;
+        }
+
+        .sidebar {
+            width: 100px;
+            background-color: #f1f1f1;
+            overflow: auto;
+        }
+
         .sidebar a {
-            text-align: center;
-            float: none;
+            display: flex;
+            align-items: center;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
         }
+
+        .sidebar a img {
+            height: 1em;
+            width: auto;
+            margin-right: 8px;
         }
-        </style>
+
+        .sidebar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .sidebar a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
+
+        .content {
+            flex: 1;
+            padding: 1px 16px;
+        }
+
+        @font-face {
+            font-family: 'Heartbreak';
+            src: url('{{ asset('assets/Heartbreak.ttf') }}') format('truetype');
+        }
+
+        .user-list {
+            font-family: 'Heartbreak', sans-serif;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {float: left;}
+            .content {margin-left: 0;}
+        }
+
+        @media screen and (max-width: 1000px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    
     <div class="container">
-        <!-- DAYO: Travel Manager Navigation Bar -->
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a class="navbar-brand" href="#"><h2>DAYO: Travel Manager</h2></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  </nav>
-            </div>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="{{ asset('assets/img/logo.png') }}" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
 
-        <!-- Sidebar -->
-        <div class="row">
-            <div class="col-md-3">
-                <div class="sidebar">
-                    <a class="active" href="{{ url('home') }}">Home</a>
-                    <a href="{{ url('users') }}">Users</a>
-                    <a href="{{ url('listings') }}">Listings</a>
-                    <a href="{{ url('listing_types') }}">Listing Types</a>
-                    <a href="{{ url('countries') }}">Countries</a>
-                </div>
+        <div class="content-wrapper">
+            <div class="sidebar">
+                  <a class="active" href="{{ url('/') }}"><img src="{{ asset('assets/img/home.png') }}" alt="Home"></a>
+                <a href="{{ url('users') }}" class="user-list"><img src="{{ asset('assets/img/user.png') }}" alt="User"></a>
+                <a href="{{ url('listings') }}"><img src="{{ asset('assets/img/list.png') }}" alt="List"></a>
+                <a href="{{ url('listing_types') }}"><img src="{{ asset('assets/img/building.png') }}" alt="Building"></a>
+                <a href="{{ url('countries') }}"><img src="{{ asset('assets/img/countries.png') }}" alt="Countries"></a>
             </div>
 
-            <div class="col-md-9">
+            <div class="content">
                 @yield('content')
             </div>
         </div>
     </div>
-
 </body>
 </html>

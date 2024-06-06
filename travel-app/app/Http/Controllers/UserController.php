@@ -7,6 +7,14 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use App\Models\User;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Route;
+
+
+// Define the route for the homepage
+Route::get('/', function () {
+    return view('homepage');
+});
+
 
 class UserController extends Controller
 {
@@ -22,7 +30,10 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(): View
+
+
+
+     public function create(): View
     {
         return view('users.create');
     }
