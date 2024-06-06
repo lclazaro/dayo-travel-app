@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model
 {
     protected $table='users';
-    protected $primaryKey='id';
-    protected $fillable=['fname','lname','age','sex','contactnum','email'];
+    protected $primaryKey='uid';
+    protected $fillable=['uid', 'fname','lname','age','sex','contactnum','email'];
     use HasFactory;
     public $timestamps = false;
 }

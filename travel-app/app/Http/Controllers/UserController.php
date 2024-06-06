@@ -82,7 +82,8 @@ class UserController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
-        User::destroy($id);
+        $user = User::find($id);
+        $user->delete();
         return redirect('users')->with('flash_message', 'Student Deleted!');
     }
 }

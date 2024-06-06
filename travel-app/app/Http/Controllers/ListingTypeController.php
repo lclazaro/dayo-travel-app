@@ -83,6 +83,6 @@ class ListingTypeController extends Controller
     public function destroy(string $id): RedirectResponse
     {
         Listing_type::destroy($id);
-        return redirect('listing_types')->with('flash_message', 'Student Deleted!');
+        return redirect('listingtypes')->with('flash_message', 'Student Deleted!');
     }
 }

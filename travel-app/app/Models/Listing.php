@@ -12,4 +12,9 @@ class Listing extends Model
     protected $fillable=['uid','list_id','list_name','unit_type','barangay','city', 'province', 'region', 'country_code'];
     use HasFactory;
     public $timestamps = false;
+    
+    // public function country(): BelongsTo
+    // {
+    //     return $this->belongsTo(Country::class, 'country_code')->withoutGlobalScopes();
+    // }
 }

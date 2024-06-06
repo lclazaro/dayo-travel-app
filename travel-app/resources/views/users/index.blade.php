@@ -27,7 +27,7 @@
                 @foreach($users as $item)
                     <tr>
                         <!-- <td>{{ $loop->iteration }}</td> -->
-                        <>
+                        <td>{{ $item->uid }}</td>
                         <td>{{ $item->fname }}</td>
                         <td>{{ $item->lname }}</td>
                         <td>{{ $item->age }}</td>
@@ -36,8 +36,8 @@
                         <td>{{ $item->email }}</td>
 
                         <td>
-                            <a href="{{ url('/users/' . $item->id) }}" title="View User"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                            <a href="{{ url('/users/' . $item->id . '/edit') }}" title="Edit User"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                            <a href="{{ url('/users/' . $item->uid) }}" title="View User"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                            <a href="{{ url('/users/' . $item->uid . '/edit') }}" title="Edit User"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
 
                             <form method="POST" action="{{ url('/users' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                 {{ method_field('DELETE') }}
