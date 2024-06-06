@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-    <h3>Login content</h3>
+    <h3>Dashboard content</h3>
 </body>
 </html>
 @endsection
