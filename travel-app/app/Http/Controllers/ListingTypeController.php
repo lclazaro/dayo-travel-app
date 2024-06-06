@@ -62,8 +62,8 @@ class ListingTypeController extends Controller
      */
     public function edit(string $id): View
     {
-        $listings=ListingType::find($id);
-        return view('listings.edit') -> with('listings',$users);
+        $listingtypes=ListingType::find($id);
+        return view('listingtypes.edit') -> with('listingtypes',$listingtypes);
     }
 
     /**
