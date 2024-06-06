@@ -11,4 +11,5 @@ class Listing extends Model
     protected $primaryKey='list_id';
     protected $fillable=['uid','list_id','list_name','unit_type','barangay','city', 'province', 'region', 'country_code'];
     use HasFactory;
+    public $timestamps = false;
 }

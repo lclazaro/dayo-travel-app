@@ -2,11 +2,13 @@
 @section('content')
  
 <div class="card">
-  <div class="card-header">User Page</div>
+  <div class="card-header">Listing Page</div>
   <div class="card-body">
       
       <form action="{{ url('listings') }}" method="post">
         {!! csrf_field() !!}
+        <label>UID</label></br>
+        <input type="text" name="uid" id="uid" class="form-control"></br>
         <label>Name</label></br>
         <input type="text" name="list_name" id="list_name" class="form-control"></br>
         <label>Unit Type</label></br>

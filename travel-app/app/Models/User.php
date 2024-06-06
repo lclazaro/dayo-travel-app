@@ -11,4 +11,5 @@ class User extends Model
     protected $primaryKey='id';
     protected $fillable=['fname','lname','age','sex','contactnum','email'];
     use HasFactory;
+    public $timestamps = false;
 }

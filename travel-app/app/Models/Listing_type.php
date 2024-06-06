@@ -11,4 +11,5 @@ class Listing_type extends Model
     protected $primaryKey='unit_type';
     protected $fillable=['unit_type','unit_term'];
     use HasFactory;
+    public $timestamps = false;
 }

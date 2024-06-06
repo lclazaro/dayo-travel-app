@@ -5,9 +5,8 @@
         <h2>Listing List</h2>
     </div>
     <div class="card-body">
-        <a href="{{ url('/users/create') }}" class="btn btn-success btn-sm" title="Add New User" style="pdding: 0;"
-            <img src="{{ 'asset(assests/img/add.png')}} alt="Add New" sttyle= "height:20px; width: 20px;"
-            <!-- i class="fa fa-plus" aria-hidden="true"></i> Add New -->
+        <a href="{{ url('/listings/create') }}" class="btn btn-success btn-sm" title="Add New User" style="pdding: 0;"
+            < i class="fa fa-plus" aria-hidden="true"></i> Add New
         </a>
         <br/>
         <br/>

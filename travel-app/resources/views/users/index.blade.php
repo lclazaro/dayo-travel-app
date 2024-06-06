@@ -26,7 +26,8 @@
                 <tbody>
                 @foreach($users as $item)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        <!-- <td>{{ $loop->iteration }}</td> -->
+                        <>
                         <td>{{ $item->fname }}</td>
                         <td>{{ $item->lname }}</td>
                         <td>{{ $item->age }}</td>

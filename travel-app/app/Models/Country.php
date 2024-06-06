@@ -11,4 +11,5 @@ class Country extends Model
     protected $primaryKey='country_code';
     protected $fillable=['country_code','country_name','continent'];
     use HasFactory;
+    public $timestamps = false;
 }
