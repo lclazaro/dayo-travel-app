@@ -3,15 +3,15 @@
  
  
 <div class="card">
-  <div class="card-header">User Page</div>
+  <h3 class="card-header">User Page</h3>
   <div class="card-body">
         <div class="card-body">
-        <h5 class="card-title">First Name : {{ $users->fname }}</h5>
-        <p class="card-text">Last Name : {{ $users->lname }}</p>
-        <p class="card-text">Mobile : {{ $users->age }}</p>
-        <p class="card-text">Mobile : {{ $users->sex }}</p>
-        <p class="card-text">Mobile : {{ $users->contactnum }}</p>
-        <p class="card-text">Mobile : {{ $users->email }}</p>
+        <p class="card-title">First Name: {{ $users->fname }}</p>
+        <p class="card-text">Last Name: {{ $users->lname }}</p>
+        <p class="card-text">Age: {{ $users->age }}</p>
+        <p class="card-text">Gender: {{ $users->sex }}</p>
+        <p class="card-text">Mobile Number: {{ $users->contactnum }}</p>
+        <p class="card-text">Email Address: {{ $users->email }}</p>
   </div>
        
     </hr>

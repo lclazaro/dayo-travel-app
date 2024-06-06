@@ -8,3 +8,9 @@ Route::get('/', function () {
 });
 
 Route::resource('/users',UserController::class);
+
+// routes/web.php
+
+Route::get('/about', function () {
+    return view('about');
+});

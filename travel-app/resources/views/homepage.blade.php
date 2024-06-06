@@ -27,16 +27,6 @@
             height: 40px;
             width: auto;
         }
-        .bg-cover {
-            background: url('{{ asset('assets/img/background.png') }}') no-repeat center center;
-            background-size: cover;
-            height: calc(100vh - 56px); /* Adjust based on your navbar height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-        }
         .content-wrapper h1 {
             font-size: 3rem;
             font-weight: 700;
@@ -59,7 +49,7 @@
         .sidebar a {
             display: flex;
             align-items: center;
-            color: black;
+            color: #324F39;
             padding: 16px;
             text-decoration: none;
         }
