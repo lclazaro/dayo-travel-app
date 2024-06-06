@@ -9,6 +9,6 @@ class Signup extends Model
 {
     protected $table='userinfo';
     protected $primaryKey='email';
-    protected $fillable=['email','password'];
+    protected $fillable=['fname','lname','age','sex','phonenumber','email','password'];
     use HasFactory;
 }

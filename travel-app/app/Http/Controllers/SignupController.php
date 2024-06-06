@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Signup;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class SignupController extends Controller
@@ -11,7 +13,7 @@ class SignupController extends Controller
      */
     public function index()
     {
-        //
+        return view('signup.create');
     }
 
     /**
@@ -25,9 +27,11 @@ class SignupController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
-        //
+        $input = $request->all();
+        Signup::create($input);
+        return redirect('profile');
     }
 
     /**
