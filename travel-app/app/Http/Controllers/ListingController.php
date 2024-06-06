@@ -63,7 +63,7 @@ class ListingController extends Controller
     public function edit(string $id): View
     {
         $listings=Listing::find($id);
-        return view('listings.edit') -> with('listings',$users);
+        return view('listings.edit') -> with('listings',$listings);
     }
 
     /**
@@ -71,10 +71,10 @@ class ListingController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
     {
-        $student = User::find($id);
+        $listings = Listing::find($id);
         $input = $request->all();
-        $student->update($input);
-        return redirect('users')->with('flash_message', 'Student Updated!');
+        $listings->update($input);
+        return redirect('listings')->with('flash_message', 'Listing Updated!');
     }
 
     /**
@@ -82,7 +82,7 @@ class ListingController extends Controller
      */
     public function destroy(string $id): RedirectResponse
     {
-        User::destroy($id);
-        return redirect('users')->with('flash_message', 'Student Deleted!');
+        Listing::destroy($id);
+        return redirect('listings')->with('flash_message', 'Listing Deleted!');
     }
 }

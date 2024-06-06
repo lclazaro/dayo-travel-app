@@ -8,7 +8,7 @@
       <form action="{{ url('listings') }}" method="post">
         {!! csrf_field() !!}
         <label>Name</label></br>
-        <input type="text" name="name" id="name" class="form-control"></br>
+        <input type="text" name="list_name" id="list_name" class="form-control"></br>
         <label>Unit Type</label></br>
         <input type="text" name="unit_type" id="unit_type" class="form-control"></br>
         <label>Barangay</label></br>

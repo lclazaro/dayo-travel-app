@@ -11,7 +11,7 @@
         <input type="hidden" name="uid" id="uid" value="{{$listings->uid}}" id="uid" />
         <input type="hidden" name="list_id" id="list_id" value="{{$listings->list_id}}" id="list_id" />
         <label>Name</label></br>
-        <input type="text" name="name" id="name" value="{{$listings->name}}" class="form-control"></br>
+        <input type="text" name="name" id="name" value="{{$listings->list_name}}" class="form-control"></br>
         <label>Unit Type</label></br>
         <input type="text" name="unit_type" id="unit_type" value="{{$listings->unit_type}}" class="form-control"></br>
         <label>Barangay</label></br>
